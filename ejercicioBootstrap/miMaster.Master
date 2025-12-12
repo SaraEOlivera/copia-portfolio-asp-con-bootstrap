@@ -6,8 +6,24 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Portofolio con Bootstrap</title>
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Favicon -->
+    <link rel="icon" runat="server" href="~/images/logo.svg" type="image/svg+xml" />
+
+        <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- CSS propio -->
+    <link runat="server" href="~/content/estilosMaster.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+     
+    <!-- Bootstrap CDNs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
@@ -16,32 +32,48 @@
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <a class="navbar-brand logo-nav" href="#">
+                            <i class="bi bi-code-square"></i>
+                    </a>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                <a runat="server" href="Default.aspx" class="nav-link active" aria-current="page">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Proyectos</a>
+                                <a runat="server" href="Proyectos.aspx" class="nav-link">Proyectos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sobre mí</a>
+                                <a runat="server" href="SobreMi.aspx" class="nav-link">Sobre mí</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="#">Contacto</a>
+                                <a runat="server" href="Contacto.aspx" class="nav-link">Contacto</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-            <footer>Este es el footer</footer>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <footer>
+                <hr />
+                <div class="contenedor-footer">
+                    <p>Sara E. Olivera 2025</p>
+                    <div class="contenedor-iconos">
+                        <a href="https://github.com/SaraEOlivera?tab=repositories" target="_blank" rel="noopener noreferrer" class="iconos">
+                            <i class="bi bi-github"></i>
+                        </a>
+
+                        <a href="mailto: saraeolivera@gmail.com" target="_blank" rel="noopener noreferrer" class="iconos">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
     </form>
 </body>
